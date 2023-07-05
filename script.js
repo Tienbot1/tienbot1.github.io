@@ -28,8 +28,8 @@ button.textContent = startPhrase[randomIndex];
 
 //появление портала
 function getPortal(){
-    portal.style = "opacity: 1; width: 800px;";
-    setTimeout(function() {portalBtn.style = "opacity: 1;";}, 1750);
+    portal.style = "opacity: 1; width: 800px; display:block";
+    setTimeout(function() {portalBtn.style = "opacity: 1; display:block";}, 1750);
     soundEffect.play();
 }
 
