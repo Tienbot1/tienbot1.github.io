@@ -22,19 +22,22 @@ html{
 
 .button{
     position: absolute;
+    opacity: 0;
+    /* transition: ease 1.5s; */
 }
 
 .portal {
-    width: 800px;
+    width: 0px;
     margin-bottom: 50px;
     margin-right: 50px;
+    opacity: 0;
+    transition: ease 1.5s;
 }
 
 #startButton {
     display: inline-block;
     position: relative;
     padding: 15px 30px;
-    /* background-color: #18360f; */
     background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
     text-decoration: none;
@@ -68,10 +71,75 @@ html{
   #startButton:hover::before {
     left: 100%;
   }
+  
+  .portalGun{
+    position: absolute;
+    bottom: -60px;
+    transform: 0.5s ease-out;
+  }
 
-  @media (max-width: 300px) {
+  .portalGun img {
+    width: 220px;
+  }
+
+  .portalGunContent{
+    position: relative;
+  }
+
+  .glowing {
+    position: absolute;
+    top: 20%;
+    left: 51%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    width: 74px;
+    height: 120px;
+    border-radius: 30%;
+    background-color: rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    animation: glow 1s ease-in-out infinite;
+  }
+  
+  .portalGunBtn{
+    position: absolute;
+    bottom: 26%;
+    left: 41%;
+    border-radius: 50%;
+    height: 47px;
+    width: 40px;
+  }
+
+  .portalGunBtn:hover{
+    cursor: pointer;
+  }
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.9);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+  }
+  
+  @media (max-width: 564px) {
     .portal {
         margin-bottom: 30px;
         margin-right: 20px;
+    }
+
+    .portalGun img {
+        width: 170px;
+    }
+    .glowing{
+        width: 57px;
+        height: 90px;
+    }
+    .portalGunBtn {
+        bottom: 24%;
+        left: 39%;
     }
   }
