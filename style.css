@@ -7,7 +7,6 @@ html{
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    position: relative;
 }
 
 .container {
@@ -15,6 +14,7 @@ html{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    position: relative;
 }
 
 .container a{
@@ -89,7 +89,6 @@ html{
   .portalGun{
     position: absolute;
     bottom: -60px;
-    transform: 0.5s ease-out;
   }
 
   .portalGun img {
