@@ -88,7 +88,7 @@ html{
   
   .portalGun{
     position: absolute;
-    bottom: -60px;
+    bottom: 0px;
   }
 
   .portalGun img {
